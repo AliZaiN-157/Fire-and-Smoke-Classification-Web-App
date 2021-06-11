@@ -1,9 +1,9 @@
 # from classify import predict
+import tensorflow as tf
 from tensorflow.keras import preprocessing
 from tensorflow.keras.preprocessing import image
 from tensorflow.keras.models import load_model
 import streamlit as st
-import tensorflow as tf
 import tensorflow_hub as hub
 from PIL import Image
 import numpy as np
