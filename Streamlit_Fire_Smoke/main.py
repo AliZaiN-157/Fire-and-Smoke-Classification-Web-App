@@ -11,6 +11,8 @@ import matplotlib.pyplot as plt
 st.set_option('deprecation.showfileUploaderEncoding', False)
 st.title('Fire Smoke Detection Web App')
 
+original_location_of_model = "D:/work/DeepLeaning_Project/smoke_fire/model/Fire_and_Smoke_model.h5"
+
 
 prediction = st.beta_container()
 dataset = st.beta_container()
@@ -33,7 +35,7 @@ with prediction:
 
     def predict_class(image):
         CNN = load_model(
-            r'D:/work/DeepLeaning_Project/smoke_fire/model/Fire_and_Smoke_model.h5')
+            r'../smoke_fire/model/fire_and_smoke_model.h5')
         shape = ((256, 256, 3))
         model = tf.keras.Sequential([hub.KerasLayer(CNN, input_shape=shape)])
         test_image = image.resize((256, 256))
