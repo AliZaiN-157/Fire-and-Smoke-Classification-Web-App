@@ -35,7 +35,7 @@ with prediction:
 
     def predict_class(image):
         CNN = load_model(
-            r'../smoke_fire/model/fire_and_smoke_model.h5')
+            r'../smoke_fire/model/')
         shape = ((256, 256, 3))
         model = tf.keras.Sequential([hub.KerasLayer(CNN, input_shape=shape)])
         test_image = image.resize((256, 256))
